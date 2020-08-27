@@ -62,7 +62,8 @@ try do
         {:exsync          , "0.2.4" , [only: :dev ]},
         {:meck            , "0.8.13", [only: :test]}, # required to run testgear tests
         {:websocket_client, "1.3.0" , [only: :test]}, # required to run testgear tests (also essential for upgrade_compatibility_test)
-        {:ielixir, git: "https://github.com/naru-hiyoko/IElixir.git", runtime: true},
+        {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
+        {:credo, "~> 1.4", only: [:dev, :test], runtime: false},
       ]
     end
   end
